@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&family=Moon+Dance&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 15px 30px;
+  background-color: #222;
+  z-index: 100;
+}
+.header .logo {
+  color: #e50914;
+  font-size: 2rem;
+}
+.header a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+.movie {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.movie img {
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: contrast(0.5);
+}
+.movie__info {
+  position: absolute;
+  width: 30rem;
+  height: 10rem;
+  left: 3rem;
+  bottom: 20rem;
+  color: white;
+}
+.movie__info h2 {
+  width: 30rem;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.movie__info p {
+  width: 30rem;
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.movie__info button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  padding: 0.35rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.movie__info button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.movie__info button i {
+  margin-right: 0.3rem;
+}
+.movie .modal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #222;
+  width: 100%;
+  height: 100%;
+}
+.movie .modal iframe {
+  width: 100%;
+  height: 92%;
+}
+.movie .modal i {
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  color: black;
+  z-index: 5000;
+  background-color: white;
+  border-radius: 50%;
+  border: none;
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}/*# sourceMappingURL=movie.css.map */

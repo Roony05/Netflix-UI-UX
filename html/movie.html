@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo-2006.png
+"
+      type="image/png"
+    />
+    <title></title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.4/axios.min.js"
+      integrity="sha512-6VJrgykcg/InSIutW2biLwA1Wyq+7bZmMivHw19fI+ycW0jIjsadm8wKQQLlfv3YUS4owfMDlZU38NtaAK6fSg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      // Đảm bảo đoạn mã là trong hàm async
+      async function fetchMovieData() {
+        const path = window.location.search;
+        const params = new URLSearchParams(path);
+        const movie_id = params.get("id");
+
+        // Gửi yêu cầu API
+        const response = await axios.get(
+          `https://api.themoviedb.org/3/movie/${movie_id}?api_key=5a022ed623b52d1a1e4013927ce9fe49&language=en-US`
+        );
+
+        const movie = response.data;
+
+        // Thay đổi title theo tên phim
+        document.title = `${movie.title}`;
+      }
+
+      // Gọi hàm để thực thi
+      fetchMovieData();
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/movie.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="../html/index.html">Netflix</a>
+    </header>
+    <div class="movie" id="movie">
+      <img id="movie-background" src="" alt="" />
+      <div class="movie__info">
+        <h2 id="movie_title"></h2>
+        <p id="movie_description"></p>
+        <button onclick="show_modal()"><i class="fa fa-play"></i>Trailer</button>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.4/axios.min.js"
+      integrity="sha512-6VJrgykcg/InSIutW2biLwA1Wyq+7bZmMivHw19fI+ycW0jIjsadm8wKQQLlfv3YUS4owfMDlZU38NtaAK6fSg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../js/movie.js"></script>
+  </body>
+</html>

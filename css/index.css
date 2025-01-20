@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Diphylleia&family=Moon+Dance&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 8vh;
+  padding: 15px 30px;
+  background-color: #222;
+  z-index: 100;
+}
+.header .logo {
+  color: #e50914;
+  font-size: 2rem;
+}
+.header a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body {
+  background-color: #111;
+  color: #fff;
+}
+
+.hero-carousel .single-carousel {
+  position: relative;
+}
+.hero-carousel .single-carousel img {
+  width: 100%;
+  height: 70vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 25% 10%;
+     object-position: 25% 10%;
+  mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+}
+.hero-carousel .single-carousel .movie__info {
+  position: absolute;
+  bottom: 50%;
+  margin-left: 3.5rem;
+  width: 50rem;
+}
+.hero-carousel .single-carousel .movie__info h2 {
+  width: 30rem;
+  font-family: "Permanent Marker", serif;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.hero-carousel .single-carousel .movie__info p {
+  width: 42rem;
+  font-family: "Diphylleia", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.hero-carousel .single-carousel .movie__info button {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: white;
+  padding: 0.35rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.hero-carousel .single-carousel .movie__info button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+.hero-carousel .single-carousel .movie__info button i {
+  margin-right: 0.3rem;
+}
+
+.movie-row {
+  position: relative;
+}
+.movie-row__items .item {
+  padding: 1.3rem;
+  transition: all 0.3s;
+}
+.movie-row__items .item img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 30% 50%;
+     object-position: 30% 50%;
+}
+.movie-row__items .item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.movie-row__items .slick-prev,
+.movie-row__items .slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  font-size: 0.7rem;
+  height: 0.9rem;
+  width: 0.9rem;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center !important;
+  background-color: white;
+  opacity: 0.5;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.movie-row__items .slick-prev i,
+.movie-row__items .slick-next i {
+  font-weight: 900;
+}
+.movie-row__items .slick-prev:hover,
+.movie-row__items .slick-next:hover {
+  opacity: 1;
+}
+.movie-row__items .slick-next {
+  right: 0;
+}
+.movie-row__title {
+  margin: 0.5rem 0 0 0.5rem;
+}/*# sourceMappingURL=index.css.map */

@@ -35,7 +35,6 @@ body {
 .hero-carousel {
   .single-carousel {
     position: relative;
-
     img {
       width: 100%;
       height: 70vh;
@@ -46,7 +45,7 @@ body {
     }
     .movie__info {
       position: absolute;
-      bottom: 50%;
+      bottom: 35%;
       margin-left: 3.5rem;
       width: 50rem;
       h2 {
@@ -54,12 +53,35 @@ body {
         font-family: "Permanent Marker", serif;
         font-weight: 400;
         font-size: 2rem;
+        word-wrap: break-word;
       }
       p {
         width: 42rem;
         font-family: "Diphylleia", serif;
         font-weight: 400;
         font-style: normal;
+      }
+      @media (max-width: 750px) {
+        p {
+          font-size: 18px;
+          max-width: 50%;
+          word-wrap: break-word;
+        }
+      }
+      @media (max-width: 600px) {
+        p {
+          font-size: 18px;
+          word-wrap: break-word;
+          max-width: 50%;
+        }
+      }
+      @media (max-width: 480px) {
+        p {
+          font-size: 18px;
+          max-width: 50%;
+          word-wrap: break-word;
+          margin-left: 0;
+        }
       }
       button {
         margin-top: 1rem;

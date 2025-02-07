@@ -9,7 +9,7 @@ const firstCarousel = async () => {
   //movie -> item
   const items = movies.map((movie) => {
     return `
-    <a class="item">
+    <div class="item">
         <img
          src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}"
          alt="${movie.title}"
@@ -19,7 +19,7 @@ const firstCarousel = async () => {
           <p id="movie_description">${movie.overview}</p>
 
         </div>
-    </a>`;
+    </div>`;
   });
   console.log(items);
   const singleCarousel = document.getElementById("single-carousel");

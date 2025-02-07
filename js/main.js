@@ -9,25 +9,25 @@ const a_movie_row = async (api, title, isPoster) => {
   const body = document.getElementById("body");
 
   body.innerHTML += `
-    <div class="movie-row" id="movie-row">
+  <div class="movie-row" id="movie-row">
       <div class="movie-row__title" id="movie-row__title">
         <h2>${title}</h2>
-    </div>
+      </div>
 
-    <div class="movie-row__items">  
-        <div class="responsive-carousel" id="responsive-carousel">
-          ${movies
-            .map((movie) => {
-              return `
-            <a class="item" href="movie.html?id=${movie.id}">
-              <img src="https://image.tmdb.org/t/p/original/${
-                isPoster ? movie.poster_path : movie.backdrop_path
-              }" alt="${movie.title}" />
-            </a>`;
-            })
-            .join("")}
-        </div>
-    </div>`;
+      <div class="movie-row__items">  
+          <div class="responsive-carousel" id="responsive-carousel">
+            ${movies
+              .map((movie) => {
+                return `
+              <a class="item" href="movie.html?id=${movie.id}">
+                <img src="https://image.tmdb.org/t/p/original/${
+                  isPoster ? movie.poster_path : movie.backdrop_path
+                }" alt="${movie.title}" />
+              </a>`;
+              })
+              .join("")}
+      </div>
+  </div>`;
 };
 // all movies rows carousels
 const create_all_movies_rows = async () => {
